@@ -1,15 +1,134 @@
-# ReadMe
-ReadME FinancIA Banorte
-Perfecto, Eduardo. He integrado toda la información adicional en el README, manteniendo la estructura profesional y clara. Aquí tienes el archivo completo en formato Markdown, listo para usar como documentación oficial:
-
 ```markdown
-#  FinancIA Banorte
+# ReadMe
+# FinancIA Banorte
 
 Sistema financiero inteligente con soporte dual para Persona Física (PF) y Persona Moral (PM), diseñado para dispositivos móviles. Ofrece visualización de datos, asistencia conversacional, simulación financiera y componentes interactivos optimizados para experiencia de usuario.
 
 ---
 
-## 📱 Diseño y Estructura
+Características
+
+### TypeScript Server (`financia/`)
+- Consulta de saldos y movimientos bancarios
+- Calculadora de préstamos
+- Integración con Supabase para almacenamiento
+- Asistente financiero con Gemini AI
+- Implementación del protocolo MCP
+
+### Python Tools (`herramientas-python/`)
+- Simulador de inversiones
+- Calculadora universal de préstamos
+- Planificación de ahorro personalizada
+- Comparativa de opciones financieras
+- Módulo de educación financiera
+
+## 📋 Requisitos
+
+### Node.js Server
+```json
+{
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "@modelcontextprotocol/sdk": "^1.20.2",
+    "@supabase/supabase-js": "^2.76.1",
+    "zod": "^3.25.76"
+  }
+}
+```
+
+### Python Tools
+```
+seaborn>=0.12.2
+matplotlib>=3.7.0
+pandas>=2.0.0
+numpy>=1.24.0
+```
+
+## 🛠️ Instalación
+
+1. **Node.js Server**
+```bash
+cd financia
+npm install
+npm run build
+```
+
+2. **Python Tools**
+```bash
+cd herramientas-python
+pip install -r requirements.txt
+```
+
+## 📚 Uso
+
+### Servidor TypeScript
+
+El servidor ofrece las siguientes herramientas a través de MCP:
+
+1. **Consulta de Saldo**
+   - Obtiene el saldo de una cuenta bancaria
+   - Muestra balance y disponible
+
+2. **Consulta de Movimientos**
+   - Lista transacciones recientes
+   - Filtra por período de tiempo
+
+3. **Calculadora de Préstamos**
+   - Calcula pagos mensuales
+   - Muestra total de intereses y monto final
+
+4. **Asistente Financiero (Gemini AI)**
+   - Responde preguntas financieras
+   - Provee consejos personalizados
+
+### Herramientas Python
+
+Las herramientas Python incluyen:
+
+1. **Simulador de Inversiones**
+   - Proyección de crecimiento
+   - Cálculo de rendimientos
+   - Análisis de interés compuesto
+
+2. **Calculadora Universal**
+   - Análisis de préstamos
+   - Cálculo de pagos
+   - Evaluación de costos totales
+
+3. **Planificación de Ahorro**
+   - Estrategias personalizadas
+   - Ajuste por tolerancia al riesgo
+   - Metas financieras
+
+4. **Comparativa Financiera**
+   - Evaluación de opciones
+   - Análisis comparativo
+   - Recomendaciones basadas en datos
+
+5. **Educación Financiera**
+   - Conceptos básicos
+   - Guías sobre CETES
+   - Información sobre fondos de inversión
+
+## ⚙️ Configuración
+
+### TypeScript Server
+Configure las variables de entorno en el archivo correspondiente:
+```typescript
+const SUPABASE_URL = 'your-supabase-url'
+const SUPABASE_ANON_KEY = 'your-supabase-key'
+const GEMINI_API_KEY = 'your-gemini-api-key'
+```
+
+## 📄 Licencia
+
+ISC
+
+## 👤 Autor
+
+Manuel
+
+## Diseño y Estructura
 
 - Dispositivo objetivo: iPhone 14 Pro Max (430x932px)
 - Elementos nativos: barra de status iOS, home indicator, bordes redondeados
@@ -41,7 +160,7 @@ Sistema financiero inteligente con soporte dual para Persona Física (PF) y Pers
 
 ---
 
-## 📊 Pantallas Principales
+## Pantallas Principales
 
 ### Dashboard PF (`/components/DashboardPF.tsx`)
 - Header rojo con saludo personalizado
@@ -106,59 +225,59 @@ Sistema financiero inteligente con soporte dual para Persona Física (PF) y Pers
 
 ---
 
-## 🧭 Navegación
+## Navegación
 
 ### Barra Inferior (`/components/BottomNav.tsx`)
-- 5 pestañas: 🏠 Dashboard, 📊 Análisis, 🎯 Priorización, 💬 Chat, 👤 Perfil
+- 5 pestañas:  Dashboard,  Análisis,  Priorización,  Chat,  Perfil
 - Iconos Lucide React
 - Indicador activo
 - Fija y visible en todo momento
 
 ---
 
-## 🧩 Funcionalidades Compartidas
+## Funcionalidades Compartidas
 
-### 🔢 Simulación Financiera
+### Simulación Financiera
 - Calculadora universal: intereses, monto del préstamo, plazo y pago inicial
 - Proyección de gastos principales (TOP 5), análisis de tendencias y opción para agregar nuevas categorías
 - Control de flujo de efectivo: reflejado en el monto disponible para gastar
 - Visualización por períodos y generación de metas de destino
 
-### 🧠 Experiencias Inteligentes y Educación Financiera
+### Experiencias Inteligentes y Educación Financiera
 - Recomendaciones inteligentes: alertas sobre pagos próximos, riesgos detectados y oportunidades de ahorro
 - Mensajes proactivos personalizados: buenas prácticas financieras basadas en el historial del usuario
 
 ---
 
-## 🏢 Funcionalidades Específicas para Persona Moral
+## Funcionalidades Específicas para Persona Moral
 
-### 🔐 Gestión Fiscal Avanzada
+### Gestión Fiscal Avanzada
 - Administración de CFDIs por clave, seguimiento de gastos y control fiscal
 - Consolidación de información fiscal, incluyendo reportes en video si aplica
 
-### 📄 El Factor WOW: Reporte Profesional
+### El Factor WOW: Reporte Profesional
 - Generación automática de un reporte mensual en PDF de alta fidelidad
 - Consolidado único que elimina la necesidad de múltiples documentos
 - Disponible para descarga desde la plataforma o mediante solicitud directa del PDF MCP
 
 ---
 
-## 👤 Funcionalidades Específicas para Persona Física
+## Funcionalidades Específicas para Persona Física
 
-### 💰 Herramientas de Ahorro y Crecimiento
+### Herramientas de Ahorro y Crecimiento
 - Simuladores de inversión y módulos “What If” personalizados
 - Proyectos de optimización de capital bajo distintos escenarios
 - Planificación de ahorro con recomendaciones adaptadas
 - Educación financiera básica y herramientas para establecer metas alcanzables
 - Recursos para nuevos usuarios
 
-### 📊 Control Detallado de Gastos
+### Control Detallado de Gastos
 - Seguimiento de gastos no esenciales, incluyendo gastos hormiga
 - Clasificación detallada por categoría para mejorar la toma de decisiones
 
 ---
 
-## 🎯 Características Especiales
+## Características Especiales
 
 - Sistema Dual de Perfiles
   - PF: Finanzas personales
@@ -182,7 +301,7 @@ Sistema financiero inteligente con soporte dual para Persona Física (PF) y Pers
 
 ---
 
-## 📦 Librerías y Tecnologías
+## Librerías y Tecnologías
 
 - React + TypeScript
 - Tailwind CSS v4.0
@@ -194,7 +313,7 @@ Sistema financiero inteligente con soporte dual para Persona Física (PF) y Pers
 
 ---
 
-## 🎨 Sistema de Diseño
+## Sistema de Diseño
 
 - Paleta Banorte:
   - Rojo `#ED1C24`, Amarillo `#FFC72C`, grises para fondos
@@ -206,7 +325,7 @@ Sistema financiero inteligente con soporte dual para Persona Física (PF) y Pers
 
 ---
 
-## 📁 Archivos de Configuración
+## Archivos de Configuración
 
 - `/styles/globals.css`: estilos globales y tipografía
 - `/guidelines/Guidelines.md`: guías de diseño
@@ -214,7 +333,7 @@ Sistema financiero inteligente con soporte dual para Persona Física (PF) y Pers
 
 ---
 
-## 📊 Resumen Técnico
+## Resumen Técnico
 
 - Pantallas funcionales: 11
 - Flujos principales: Autenticación, PF, PM
@@ -226,5 +345,3 @@ Sistema financiero inteligente con soporte dual para Persona Física (PF) y Pers
   - Cifras Clave
   - Sistema de bloqueos
 ```
-
-¿Quieres que te lo prepare también como presentación ejecutiva o ficha técnica para inversionistas o stakeholders? Puedo ayudarte a convertirlo en un formato visual atractivo.
