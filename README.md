@@ -115,9 +115,9 @@ Las herramientas Python incluyen:
 ### TypeScript Server
 Configure las variables de entorno en el archivo correspondiente:
 ```typescript
-const SUPABASE_URL = 'your-supabase-url'
-const SUPABASE_ANON_KEY = 'your-supabase-key'
-const GEMINI_API_KEY = 'your-gemini-api-key'
+const SUPABASE_URL = 'https://ipolfhnytpvtjdcdflio.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imlwb2xmaG55dHB2dGpkY2RmbGlvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjEzNTg1NTEsImV4cCI6MjA3NjkzNDU1MX0.B_r3hdC1ngsJ0krlgn4bQiEMs1Lhuvv1XRmRBA7wBwo';
+const GEMINI_API_KEY = 'AIzaSyCMZTeFeUDSRUAzzfZrWkZDjEz5H7DBKYk'
 ```
 
 ## 📄 Licencia
